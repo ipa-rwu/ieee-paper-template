@@ -1,0 +1,107 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[ansinew]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{hyperref}
+\setlength {\marginparwidth }{2cm}
+\usepackage{todonotes}
+\usepackage{mdframed}
+\usepackage{array}
+\usepackage{tcolorbox}
+\usepackage[style=ieee, sorting=none]{biblatex}
+\addbibresource{references.bib}
+\definecolor{mycolor}{rgb}{0.122, 0.435, 0.698}% Rule colour
+
+\AtBeginDocument{%
+  \def\chapterautorefname{Chp.}
+  \def\sectionautorefname{Sec.}
+  \def\figautorefname{Fig.}
+  \def\subsectionautorefname{Sec.}
+  \def\subsubsectionautorefname{Sec.}
+  \def\subsubsubsectionautorefname{Sec.}
+  \def\itemautorefname{Def.}
+  \def\definitionautorefname{Def.}
+  \def\figureautorefname{Fig.}
+  \def\theoremautorefname{Thm.}
+  \def\lemmaautorefname{Lem.}
+  \def\tableautorefname{Tbl.}
+  \def\figureautorefname{Fig.}
+}
+\addtolength{\topmargin}{0.1in}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Paper title
+}
+
+%maketitle
+
+\author{
+\IEEEauthorblockN{Bob\IEEEauthorrefmark{1},
+and Jack\IEEEauthorrefmark{2}}
+
+\IEEEauthorblockA{
+\textit{Company} \textit{Department} \\
+Address\\
+{\textit {\{\IEEEauthorrefmark{1}bob, \IEEEauthorrefmark{2}jack\}@email}}
+}
+}
+
+\newcommand{\bob}[1]{\textcolor{blue}{Ruichao:~#1}}
+\newcommand{\todoBob}[1]{\textcolor{red}{ToDo Bob:~#1}}
+\newcommand{\refig}[1]      {{Fig.~\ref{#1}}}
+\newcommand{\refsec}[1]      {{Sec.~\ref{#1}}}
+\newtcolorbox{mybox}{colback=mycolor!5!white,colframe=mycolor!75!black}
+
+\newcommand{\etal}[1] {#1 \textit{et al.}}
+
+\maketitle
+
+\thispagestyle{empty}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+\end{IEEEkeywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{01_Introduction.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{Acknowledgment}
+\label{sec:acknowledgment}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%References are important to the reader; therefore, each citation must be complete and correct. If at all possible, references should be commonly available publications.
+
+% \nocite{*}
+%\bibliographystyle{IEEEtranS}
+%\bibliography{references}
+
+\renewcommand*{\bibfont}{\footnotesize}
+\printbibliography%Prints bibliography.
+
+\end{document}
